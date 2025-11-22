@@ -1,5 +1,3 @@
-# Project-on-Python-Essentials
-
 # 🔢 Number Theory & Algorithms Collection
 
 A comprehensive collection of **34 Python modules** exploring the properties of integers, prime numbers, cryptographic primitives, and computational number theory. This repository ranges from fundamental digit manipulation to advanced probabilistic algorithms and discrete mathematics sequences.
@@ -65,11 +63,12 @@ def crt(remainders, moduli):
     # Solve for x using: sum(r_i * N_i * inverse(N_i, m_i)) % N
     y_i = mod_inverse(N_i, m_i)
     total += r_i * N_i * y_i
-Collatz Conjecture (File 28)
+
+**Collatz Conjecture (File 28)
 Implements the rules of the famous "3n + 1" problem. For any positive integer n: if even, divide by 2; if odd, multiply by 3 and add 1. The function tracks the trajectory length (stopping time).
 
 Carmichael Numbers (File 30)
 Identifies "pseudoprimes" that foil the Fermat primality test. The function first ensures n is composite, then verifies a^(n-1) = 1 mod n for all a coprime to n.
 
 Pollard's Rho Algorithm (File 32)
-Finds a non-trivial factor of a composite integer n faster than trial division. It uses a randomized function f(x) = x^2 + c (mod n) to find cycles.
+Finds a non-trivial factor of a composite integer n faster than trial division. It uses a randomized function f(x) = x^2 + c (mod n) to find cycles.**
