@@ -1,8 +1,8 @@
-# 🔢 Number Theory & Algorithms Collection
+# Number Theory & Algorithms Collection
 
 A comprehensive collection of **34 Python modules** exploring the properties of integers, prime numbers, cryptographic primitives, and computational number theory. This repository ranges from fundamental digit manipulation to advanced probabilistic algorithms and discrete mathematics sequences.
 
-## 📖 Overview
+## Overview
 
 This project demonstrates algorithmic proficiency in Python, focusing on mathematical rigor, efficiency, and code clarity.
 
@@ -11,7 +11,7 @@ This project demonstrates algorithmic proficiency in Python, focusing on mathema
 
 ---
 
-## 📜 Complete Algorithm Catalog
+## Complete Algorithm Catalog
 
 | File | Function / Algorithm | Description | Concept |
 | :--- | :--- | :--- | :--- |
@@ -52,7 +52,7 @@ This project demonstrates algorithmic proficiency in Python, focusing on mathema
 
 ---
 
-## 💡 Implementation Highlights & Theory
+## Implementation Highlights & Theory
 
 ### Chinese Remainder Theorem (File 22)
 Critical for optimizing RSA decryption. The function solves a system of congruences x = r_i (mod m_i) by constructing the solution using modular inverses of partial products N_i = N/m_i.
