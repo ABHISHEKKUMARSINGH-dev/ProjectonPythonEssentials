@@ -1,0 +1,120 @@
+
+📄 Number Theory & Algorithms Collection: Statement of Work (SOW)
+This document outlines the scope, objectives, algorithms, and technical specifications for the "Number Theory & Algorithms Collection," a comprehensive software repository dealing with the properties of integers and computational number theory.
+
+1. Project Overview and Objectives
+This collection comprises 34 self-contained Python modules designed to demonstrate advanced algorithmic skills with a focus on mathematical rigor, efficiency, and code clarity.
+
+The primary objectives are:
+
+To implement a comprehensive catalog of algorithms spanning basic number manipulation, prime number theory, cryptography, and discrete mathematics.
+
+To ensure all solutions operate exclusively using native Python Standard Library only (math, time, sys, random), guaranteeing zero external dependencies.
+
+To provide built-in Performance Profiling (using time and sys/tracemalloc) to measure execution speed and memory overhead for the majority of scripts.
+
+2. Scope of Algorithms (Complete Catalog)
+The project scope includes the implementation of the following core concepts and algorithms:
+
+A. Divisibility and Digit Properties
+Concept	Algorithm Examples
+Combinatorics	
+
+factorial(n) 
+
+Digit Manipulation	
+
+is_palindrome(n), mean_of_digits(n), digital_root(n) 
+
+Divisor Sum	
+
+is_abundant(n), is_deficient(n), aliquot_sum(n) 
+
+Special Numbers	
+
+is_harshad(n) (Niven), is_pronic(n) (Oblong), is_highly_composite (HCN) 
+
+Persistence	
+
+multiplicative_persistence 
+
+B. Prime Numbers and Factorization
+Concept	Algorithm Examples
+Factorization	
+
+prime_factors(n) (Trial Division), count_distinct_factors, count_divisors(n) 
+
+Primality Tests	
+
+is_mersenne_prime(p), is_fibonacci_prime(n) 
+
+Advanced Primes	
+
+twin_primes(limit) (Twin Prime Conjecture) , is_carmichael(n) (Pseudoprimes) 
+
+Probabilistic Algorithms	
+
+miller_rabin(n) (Randomized Algo), pollards_rho(n) (Sub-exponential Factorization) 
+
+C. Modular Arithmetic and Cryptography
+Concept	Algorithm Examples
+Cryptography	
+
+modular_exponentiation (Calculates (b 
+e
+ )modm) 
+
+Euclidean Algorithm	
+
+mod_inverse(a, m) (Using Extended GCD) 
+
+System of Congruences	
+
+crt(remainders, moduli) (Chinese Remainder Theorem) 
+
+Group Theory	
+
+order_mod(a, n) (Multiplicative Order) 
+
+Quadratic Reciprocity	
+
+is_quadratic_residue (via Euler's Criterion) 
+
+3. Implementation Highlights
+Chinese Remainder Theorem (CRT)
+
+Purpose: Solves a system of congruences x=r 
+i
+​
+ (modm 
+i
+​
+ ).
+
+
+Methodology: Constructs the solution x using modular inverses of partial products. This is crucial for optimizing RSA decryption performance.
+
+Collatz Conjecture (The 3n+1 Problem)
+
+Algorithm: Implements the steps: if n is even, divide by 2; if n is odd, multiply by 3 and add 1.
+
+
+Output: Tracks the trajectory length (stopping time) for n to reach 1.
+
+Carmichael Numbers
+
+Purpose: Identifies composite numbers that function as pseudoprimes, causing the Fermat primality test to fail.
+
+
+Verification: Checks if n is composite and satisfies the condition a 
+n−1
+ ≡1(modn) for all a coprime to n.
+
+Pollard's Rho Algorithm
+
+Purpose: Finds a non-trivial factor of a composite integer n more quickly than the standard trial division method.
+
+
+Methodology: Uses a randomized function f(x)=x 
+2
+ +c(modn) along with Floyd's cycle-finding logic to efficiently discover factors.
