@@ -1,120 +1,103 @@
+Number Theory & Algorithms Collection: Statement of Work (SOW) ?????
+The following paper presents a summary of the scope, objectives, algorithms, and technical specifications of a complete software repository under the general title "Number Theory & Algorithms Collection" to deal with properties of integers and computational number theory.
+1. Overview and Project Objectives
 
-📄 Number Theory & Algorithms Collection: Statement of Work (SOW)
-This document outlines the scope, objectives, algorithms, and technical specifications for the "Number Theory & Algorithms Collection," a comprehensive software repository dealing with the properties of integers and computational number theory.
+The collection below consists of 34 self-contained Python modules and demonstrates advanced algorithmic skills with a focus on mathematical rigor, efficiency, and clarity of the code.
 
-1. Project Overview and Objectives
-This collection comprises 34 self-contained Python modules designed to demonstrate advanced algorithmic skills with a focus on mathematical rigor, efficiency, and code clarity.
+Primary objectives are to:
 
-The primary objectives are:
+To implement a complete catalog of algorithms ranging from basic number manipulation and prime number theory through cryptography to discrete mathematics.
 
-To implement a comprehensive catalog of algorithms spanning basic number manipulation, prime number theory, cryptography, and discrete mathematics.
+Ensure all solutions operate using only native Python Standard Library-math, time, sys, and random Guaranteed to have zero external dependencies.
 
-To ensure all solutions operate exclusively using native Python Standard Library only (math, time, sys, random), guaranteeing zero external dependencies.
+Include performance profiling out-of-the-box by using time and sys/tracemalloc to measure execution speed and memory overhead for most of the scripts.
 
-To provide built-in Performance Profiling (using time and sys/tracemalloc) to measure execution speed and memory overhead for the majority of scripts.
+2. Scope of Algorithms- Complete Catalog
 
-2. Scope of Algorithms (Complete Catalog)
-The project scope includes the implementation of the following core concepts and algorithms:
+Core concepts and algorithms to be used in the implementation are as follows:
 
 A. Divisibility and Digit Properties
+
 Concept	Algorithm Examples
-Combinatorics	
 
-factorial(n) 
+Combinatorics
 
-Digit Manipulation	
+factorial(n)
 
-is_palindrome(n), mean_of_digits(n), digital_root(n) 
+Digit Manipulation
 
-Divisor Sum	
 
-is_abundant(n), is_deficient(n), aliquot_sum(n) 
 
-Special Numbers	
+is_palindrome(n), mean_of_digits(n), digital_root(n)
 
-is_harshad(n) (Niven), is_pronic(n) (Oblong), is_highly_composite (HCN) 
+is_abundant(n), is_deficient(n), aliquot_sum(n)
 
-Persistence	
+Special Numbers
 
-multiplicative_persistence 
+is_harshad(n) (Niven), is_pronic(n) (Oblong), is_highly_composite (HCN)
 
-B. Prime Numbers and Factorization
+Persistencia
+
+multiplicative_persistence
+
+B. Prime numbers and factorization
+
 Concept	Algorithm Examples
-Factorization	
 
-prime_factors(n) (Trial Division), count_distinct_factors, count_divisors(n) 
+Factorization
 
-Primality Tests	
+prime_factors(n) (Trial Division), count_distinct_factors, count_divisors(n)
 
-is_mersenne_prime(p), is_fibonacci_prime(n) 
+Primality Tests
 
-Advanced Primes	
+is_mersenne_prime(p), is_fibonacci_prime(n)
 
-twin_primes(limit) (Twin Prime Conjecture) , is_carmichael(n) (Pseudoprimes) 
+Advanced Primes
 
-Probabilistic Algorithms	
+twin_primes(limit) (Twin Prime Conjecture), is_carmichael(n) (Pseudoprimes)
 
-miller_rabin(n) (Randomized Algo), pollards_rho(n) (Sub-exponential Factorization) 
+Probabilistic Algorithms
+
+miller_rabin(n) (Randomized Algo), pollards_rho(n) (Sub-exponential Factorization)
 
 C. Modular Arithmetic and Cryptography
+
 Concept	Algorithm Examples
-Cryptography	
 
-modular_exponentiation (Calculates (b 
+Cryptography
+
+modular_exponentiation Returns (b
+
 e
- )modm) 
 
-Euclidean Algorithm	
+)modm)
 
-mod_inverse(a, m) (Using Extended GCD) 
+Euclidean Algorithm
+mod_inverse(a, m) (Using Extended GCD)
+System of Congruences
+crt(remainders, moduli) (Chinese Remainder Theorem)
+Group Theory
 
-System of Congruences	
 
-crt(remainders, moduli) (Chinese Remainder Theorem) 
+order_mod(a, n) (Multiplicative Order)
 
-Group Theory	
+Quadratic Reciprocity
 
-order_mod(a, n) (Multiplicative Order) 
+is_quadratic_residue via Euler's Criterion
 
-Quadratic Reciprocity	
-
-is_quadratic_residue (via Euler's Criterion) 
 
 3. Implementation Highlights
+
 Chinese Remainder Theorem (CRT)
 
-Purpose: Solves a system of congruences x=r 
+Purpose: solve a system of congruences x=r
+
+
 i
+
 ​
- (modm 
-i
-​
- ).
+
+(modm
 
 
-Methodology: Constructs the solution x using modular inverses of partial products. This is crucial for optimizing RSA decryption performance.
-
-Collatz Conjecture (The 3n+1 Problem)
-
-Algorithm: Implements the steps: if n is even, divide by 2; if n is odd, multiply by 3 and add 1.
-
-
-Output: Tracks the trajectory length (stopping time) for n to reach 1.
-
-Carmichael Numbers
-
-Purpose: Identifies composite numbers that function as pseudoprimes, causing the Fermat primality test to fail.
-
-
-Verification: Checks if n is composite and satisfies the condition a 
-n−1
- ≡1(modn) for all a coprime to n.
-
-Pollard's Rho Algorithm
-
-Purpose: Finds a non-trivial factor of a composite integer n more quickly than the standard trial division method.
-
-
-Methodology: Uses a randomized function f(x)=x 
-2
- +c(modn) along with Floyd's cycle-finding logic to efficiently discover factors.
+i In principle, there can never be a truly perfect crystal; all real crystals contain imperfections that play an important role in many practical applications. ) Methodology: Constructs solution x using modular inverses of partial products. This is necessary for any high-performing implementation of RSA decryption. Collatz Conjecture (The 3n+1 Problem) Algorithm If the number is even then divide by 2, if odd then multiply by 3 and add 1. output: traces the path length-halting time for n to converge to 1. Carmichael Numbers Checks if a number 'n' is composite and for which there exists an 'a' satisfying: n−1 ≡1(modn) for all a coprime to n. Pollard's Rho Algorithm finds a non-trivial factor of a composite integer n, more rapidly than with the general trial division technique. Approach: It involves a randomizing function as F(x)= x2. +c (mod n), and incorporates Floyd's cycle-finding logic to conclude about factors in a relatively more efficient manner.
